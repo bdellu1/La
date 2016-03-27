@@ -1,0 +1,42 @@
+ \documentclass{article}
+ \usepackage{amsmath}
+    
+ \begin{document}
+    
+ \textbf{Integration By Parts}
+  
+ To find the integral of the product of two functions, we can use a method
+ called integration by parts. The formula is
+  
+ \[
+   \int udv = uv - \int vdu.
+ \]
+  
+ Using this formula requires the student to recognize that the integrand is a     product of two functions. For example, the integral
+  
+ \[
+   \int xe^xdx
+ \]
+   
+ is a product of two functions: $x$ and $e^x$. Assume the reader is familiar w    ith u-substitution, we use a substitution consistent with our formula, we set     $u=x$ and $dv=e^xdx$. Differentiating $u$ and integrating $dv$, we get the f    ollowing:
+   
+ \begin{align*}
+ u=x, \qquad dv=e^xdx\\
+ du=dx, \qquad v=e^x.
+ \end{align*}
+   
+ Plugging this into our formula, we get
+   
+ \[
+   \int xe^x = xe^x - \int e^xdx = xe^x - e^x = e^x(x-1) + C.
+ \]
+   
+ It is important to pay attention that whichever two functions you set to $u$     and $dv$, $u$ is differientiated and $dv$ is \textit{integrated}, not differi    entiated as with $u$. The overall goal here is to set the $u$ and $dv$ to fun    ctions that will make the integral
+   
+ \[
+   \int vdu
+ \]
+   
+ simpler and easier to work with than the original integral. This of course, t    akes experience and practice.
+  
+ \end{document}
