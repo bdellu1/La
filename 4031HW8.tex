@@ -1,0 +1,38 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\begin{document}
+
+\centerline{Brandon Dellucky}
+\centerline{Homework 8}
+\centerline{3/10/16}
+\centerline{}
+
+1. Assume $f:[a,b] \rightarrow \mathbb{R}$ is continuous and there is an $f(\bar{x}) \in (0, +\infty)$. By our assumption we know
+\newline
+\centerline{}
+\centerline{$\forall \epsilon > 0, \;\exists \delta > 0, \;|x - x_n| < \delta \Rightarrow |f(x) - f(x_n)| < \epsilon$.}
+\centerline{}
+By the definition of continuity, we see that we can set a particular $\epsilon$ for $f(\bar{x})$ such that $f(\bar{x}) - \epsilon > 0$ and $f(\bar{x}) + \epsilon > 0$, thus $f(x) > 0$ for all $f(x) \in (f(\bar{x}) - \epsilon, f(\bar{x}) + \epsilon)$. Furthermore, by our definition, for our $\epsilon$ there exists a $\delta$ such that
+\centerline{}
+\centerline{(*)$A \subseteq f^{-1}(B) := \{x \in [a,b]\;|\;f(x) \in B\}$.}
+\centerline{}
+Since $\bar{x} \in [a,b]$, we see that $((\bar{x} - \delta, \bar{x} + \delta) \cap [a,b]) \subseteq [a,b]$, therefore any $x \in (\bar{x} - \delta, \bar{x} + \delta) \cap [a,b]$ will also be in $[a,b]$ and by (*) $f(x) \in B$. Since all $f(x) \in B$ are positive, our $\delta$ satisfies the condition.
+\newline
+\centerline{}
+3. Assume $f:\mathbb{R} \rightarrow \mathbb{R}$ is continuous. By definition, 
+\newline
+\centerline{}
+\centerline{$\forall \epsilon > 0, \;\exists \delta > 0, \;|x - x_n| < \delta \Rightarrow |f(x) - f(x_n)| < \epsilon$.}
+\centerline{}
+For some sequence $\{x_n\}_{n=1}^\infty \in \mathbb{R}$ and $n,p \in \mathbb{R}$, if we set some $\epsilon > 0$ to be $\epsilon = \delta$, we have
+\newline
+\centerline{}
+\centerline{$|x_n - x_{n+p}| < \delta = \epsilon \Rightarrow |f(x_n) - f(x_{n+p})| < \epsilon$,}
+\centerline{}
+thus the sequence is Cauchy and it converges to some $\bar{x} \in \mathbb{R}$, so 
+\newline
+\centerline{}
+\centerline{$x_n \rightarrow \bar{x} \Rightarrow f(x_n) \rightarrow f(\bar{x}).$}
+\centerline{}
+Therefore, $f(\bar{x})$ is in the range because $\bar{x} \in \mathbb{R}$ is a limit point and so the range is closed.	
+\end{document}
