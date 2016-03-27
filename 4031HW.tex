@@ -1,0 +1,31 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\begin{document}
+
+\centerline{Brandon Dellucky}
+\centerline{Homework 7}
+\centerline{3/3/16}
+\centerline{}
+
+2. Let $f: [a,b] \rightarrow  \mathbb{R}$ be a continuous function. We wish to show that for any $e \in \mathbb{R}$, the set\newline
+\centerline{$f^{-1}(e):=\{x \in [a,b]\;|\;f(x) = e\}$}
+is closed.
+\newline
+\newline
+By Theorem 7.5, we know that for any continuous function $f:[a,b] \rightarrow  \mathbb{R}$, there are $c,d \in \mathbb{R}$ with $c < d$ such that $f([a,b])=[c,d].$ Therefore the function $f$ also has a mapping $f:[a,b] \rightarrow [c,d]$. Since $c$ is the minimum and $d$ is the maximum of $[c,d]$, we see that if $x=a$ then $f(x) \geq c$. Similarly, if $x=b$ then $f(x) \leq d$. Therefore, by the definition of 
+\newline 
+\centerline{}
+\centerline{$f^{-1}(e):=\{x \in [a,b]\;|\;f(x) = e\}$}
+\centerline{}
+if $f(x) = e$, then $c \leq e \leq d$. Therefore, $e \in [c,d]$ so the set is closed.
+\centerline{}
+\centerline{}
+4. For $f:[a,b] \rightarrow \mathbb{R}$, we see that if $a = $min$(f([a,b]))$ then $f(a) \geq a$. Similarly, if $b = $max$(f([a,b]))$ then $f(b) \leq b$. Considering the function $x \mapsto f(x) - x$ and our inequalities, we get the following:
+\newline
+\centerline{}
+\centerline{$a \mapsto f(a) - a \geq a - a = 0$}
+\centerline{$b \mapsto f(b) - b \leq b - b = 0.$}
+\centerline{}
+By the Intermediate Value Theorem, since $f$ is continuous and $0 \in f([a,b])$, there is a fixed point $x$ such that $f(x) - x = 0$, thus $f(x) = x$.
+\centerline{}
+\centerline{}
