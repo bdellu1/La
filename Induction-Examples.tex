@@ -1,0 +1,128 @@
+\documentclass[11pt]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[makeroom]{cancel}
+\begin{document}
+\section{Theorem - $\forall n\in \mathbb{N}, P(n)\equiv\sum_{i=1}^{n}i(i+1)=\frac{n(n+1)(n+2)}{3}.$}
+\begin{proof}
+
+First we can see that $$P(0)\equiv\sum_{i=1}^{0}i(i+1)=0(0+1)=\frac{0(0+1)(0+2)}{3}=0.$$
+
+Choose an arbitrary $n\in \mathbb{N}$ such that $$P(n)\equiv\sum_{i=1}^{n}i(i+1)=\frac{n(n+1)(n+2)}{3}.$$
+
+We must show that $$P(n)\equiv \sum_{i=1}^{n}i(i+1)=\frac{n(n+1)(n+2)}{3}\longrightarrow P(n+1)\equiv\sum_{i=1}^{n+1}i(i+1)=\frac{(n+1)(n+2)(n+3)}{3}.$$
+
+We see by the inductive hypothesis that $$\sum_{i=1}^{n+1}i(i+1)=\sum_{i=1}^{n}i(i+1)+(n+1)(n+2)=\frac{n(n+1)(n+2)}{3}+(n+1)(n+2).$$
+
+If we manipulate $\frac{n(n+1)(n+2)}{3}+(n+1)(n+2)$ algebraically, we get $$\frac{n(n+1)(n+2)}{3}+\frac{3(n+1)(n+2)}{3}=\frac{(n+1)(n+2)(n+3)}{3}.$$
+
+Thus we have shown that $$P(n+1)\equiv\sum_{i=1}^{n+1}i(i+1)=\frac{(n+1)(n+2)(n+3)}{3}.$$
+
+\end{proof}
+
+\section{Theorem - $\forall n\in \mathbb{N}, P(n)\equiv\sum_{i=1}^{n} 2^{i}=2^{n+1}-1.$}
+\begin{proof}
+First we can see that $$P(0)\equiv\sum_{i=0}^{0}2^{i}=2^{0}=2^{0+1}-1=1.$$
+
+Choose an arbitrary $n\in\mathbb{N}$ such that $$P(n)\equiv\sum_{i=1}^{n} 2^{i}=2^{n+1}-1.$$
+
+We must show that $$P(n)\equiv\sum_{i=1}^{n} 2^{i}=2^{n+1}-1\longrightarrow P(n+1)\equiv\sum_{i=0}^{n+1}2^{i}=2^{n+2}-1.$$
+
+We see by the inductive hypothesis that $$\sum_{i=0}^{n+1}2^{i}=\sum_{i=0}^{n}2^{i}+2^{n+1}=2^{n+1}-1+2^{n+1}.$$
+
+If we manipulate $2^{n+1}-1+2^{n+1}$ algebraically we get $$(2)2^{n+1}-1=2^{n+2}-1.$$
+
+ Thus we have shown that $$P(n+1)\equiv\sum_{i=0}^{n+1}2^{i}=2^{n+2}-1.$$
+\end{proof}
+
+\section{Theorem - $\forall n\in\mathbb{N}, P(n)\equiv\sum_{i=0}^{n}r^{i}=\frac{1-r^{n+1}}{1-r}, (r\neq 1).$}
+\begin{proof} 
+First we see that when $r=1$ and $n=0$ $$\sum_{i=0}^{n}1^{i}=1^{0}\neq\frac{1-1^{0+1}}{1-1}.$$ 
+
+Therefore, the formula is not true for $r=1$. Additionally, we see that when $r\neq 1$ and $n=0$ $$P(0)\equiv\sum_{i=0}^{0}r^{i}=r^{0}=\frac{1-r^{0+1}}{1-r}=1.$$
+
+Choose an arbitrary $n\in\mathbb{N}$ such that $$P(n)\equiv\sum_{i=0}^{n}r^{i}=\frac{1-r^{n+1}}{1-r}, (r\neq 1).$$
+
+We must show that $$P(n)\equiv\sum_{i=0}^{n}r^{i}=\frac{1-r^{n+1}}{1-r}, (r\neq 1)\longrightarrow P(n+1)\equiv\sum_{i=0}^{n+1}r^{i}=\frac{1-r^{n+2}}{1-r}, (n\neq 1).$$
+
+We see by the induction hypothesis that $$\sum_{i=0}^{n+1}r^{i}=\sum_{i=0}^{n}r^{i}+r^{n+1}=\frac{1-r^{n+1}}{1-r}+r^{n+1}.$$
+
+If we manipulate $\frac{1-r^{n+1}}{1-r}+r^{n+1}$ algebraically we get $$\frac{1-r^{n+1}}{1-r}+\frac{r^{n+1}(1-r)}{1-r}=\frac{1-r^{n+1}+r^{n+1}-r^{n+2}}{1-r}=\frac{1-r^{n+2}}{1-r}.$$
+
+Thus we have shown that $$P(n+1)\equiv\sum_{i=0}^{n+1}r^{i}=\frac{1-r^{n+2}}{1-r}, (n\neq 1).$$
+\end{proof}
+\section{Theorem - $\forall n\in\mathbb{N}, P(n)\equiv\sum_{i=0}^{n}i!i=(n+1)!-1.$}
+\begin{proof}
+First we see that $$P(0)\equiv\sum_{i=0}^{0}i!i=0!0=(0-1)!-1=0.$$
+
+Choose an arbitrary $n\in\mathbb{N}$ such that $$P(n)\equiv\sum_{i=0}^{n}i!i=(n+1)!-1.$$
+
+We must show that $$P(n)\equiv\sum_{i=0}^{n}i!i=(n+1)!-1.\longrightarrow P(n+1)\equiv\sum_{i=0}^{n+1}i!i=(n+2)!-1.$$
+
+We see by the induction hypothesis that $$\sum_{i=0}^{n+1}i!i=\sum_{i=0}^{n}i!i+(n+1)!(n+1)=(n+1)!-1+(n+1)!(n+1).$$
+
+If we manipulate $(n+1)!-1+(n+1)!(n+1)$ algebraically we get $$(n+1)!(1+n+1)-1=(n+1)!(n+2)-1=(n+2)!-1.$$
+
+Thus we have shown that $$P(n+1)\equiv\sum_{i=0}^{n+1}i!i=(n+2)!-1.$$
+\end{proof}
+
+\section{Find and prove the formula for $\sum_{i=1}^{n}\frac{1}{i(i+1)}.$}
+
+To find the formula, we can examine the expansion of the first $n$ terms of the series, which is $$\sum_{i=0}^{n}\frac{1}{i(i+1)}=\frac{1}{1}\cdot\frac{1}{2}+\frac{1}{2}\cdot\frac{1}{3}+...+\frac{1}{n}\cdot\frac{1}{n+1}$$
+
+$$=\frac{1}{1}-\frac{1}{2}+\frac{1}{2}-\frac{1}{3}+...+\frac{1}{n}-\frac{1}{n+1}.$$
+
+As we can see, the alternating $-$ and $+$ cancel out the entirety of the series except for the first and last terms.
+
+$$=\frac{1}{1}-\cancel{\frac{1}{2}+\frac{1}{2}-\frac{1}{3}+...+\frac{1}{n}}-\frac{1}{n+1}=1-\frac{1}{n+1}.$$
+
+Manipulating $1-\frac{1}{n+1}$ algebraically we get $$\frac{n+1-1}{n+1}=\frac{n}{n+1}.$$
+
+Therefore, the formula is $$\sum_{i=1}^{n}\frac{1}{i(i+1)}=\frac{n}{n+1}.$$
+
+\begin{proof}
+
+First we can see that if $n=0$ then $$\sum_{i=1}^{0}\frac{1}{i(i+1)}=\frac{1}{0(0+1)}\neq\frac{0}{0+1}.$$
+
+Therefore the formula derived is not true for $n=0$. If we examine the series at $n=1$ we get $$\sum_{i=1}^{1}\frac{1}{i(i+1)}=\frac{1}{1(2)}=\frac{1}{1+1}=\frac{1}{2}.$$
+
+Choose an arbitrary $n\in\mathbb{N}$ where $n\neq 0$ such that $$P(n)=\sum_{i=1}^{n}\frac{1}{i(i+1)}=\frac{n}{n+1}.$$
+
+We must show through induction that $$P(n)\equiv\sum_{i=1}^{n}\frac{1}{i(i+1)}=\frac{n}{n+1}\longrightarrow P(n+1)\equiv\sum_{i=1}^{n+1}\frac{1}{i(i+1)}=\frac{n+1}{n+2}.$$
+
+We see by the induction hypothesis that $$\sum_{i=1}^{n+1}\frac{1}{i(i+1)}=\sum_{i=1}^{n}\frac{1}{i(i+1)}+\frac{1}{(n+1)(n+2)}=\frac{n}{n+1}+\frac{1}{(n+1)(n+2)}.$$
+
+By manipulating $\frac{n}{n+1}+\frac{1}{(n+1)(n+2)}$ algebraically we get $$\frac{n(n+2)+1}{(n+1)(n+2)}=\frac{n^{2}+2n+1}{(n+1)(n+2)}=\frac{n+1}{n+2}.$$
+
+Thus we have shown that when $n\neq0$ $$P(n+1)\equiv\sum_{i=1}^{n+1}\frac{1}{i(i+1)}=\frac{n+1}{n+2}.$$
+
+\end{proof}
+
+\section{Find and prove the formula for $\prod_{i=2}^{n}(1-\frac{1}{i^{2}}), n\geq 2.$}
+
+First we can see that $$\prod_{i=2}^{n}(1-\frac{1}{i^{2}})=\prod_{i=2}^{n}(\frac{i^{2}-1}{i^{2}})=\prod_{i=2}^{n}((\frac{i-1}{i})(\frac{i+1}{i})).$$
+
+To find the formula, we can examine the expansion of the product for the first $n$ terms which is $$\prod_{i=2}^{n}((\frac{i-1}{i})(\frac{i+1}{i}))=(\frac{1}{2})(\frac{3}{2})(\frac{2}{3})(\frac{4}{3})(\frac{3}{4})(\frac{5}{4})...(\frac{n-1}{n})(\frac{n+1}{n}).$$
+
+We can see that the product of the terms, except the first and last term, equal $1$. $$=(\frac{1}{2})(1)(1)(1)...(1)(\frac{n+1}{n})=(\frac{1}{2})(\frac{n+1}{n})=\frac{n+1}{2n}.$$
+
+Therefore, the formula is $$\prod_{i=2}^{n}(1-\frac{1}{i^{2}})=\frac{n+1}{2n}, n\geq2.$$
+
+\begin{proof}
+First we can see that if $n=2$ then $$\prod_{i=2}^{2}(1-\frac{1}{i^{2}})=1-\frac{1}{4}=\frac{2+1}{2(2)}=\frac{3}{4}.$$
+
+Choose an $n\in\mathbb{N}$ such that $$P(n)\equiv\prod_{i=2}^{n}(1-\frac{1}{i^{2}})=\frac{n+1}{2n}.$$
+
+We must show through induction that $$P(n)\equiv\prod_{i=2}^{n}(1-\frac{1}{i^{2}})=\frac{n+1}{2n}\longrightarrow P(n+1)\equiv\prod_{i=2}^{n+1}(1-\frac{1}{i^{2}})=\frac{n+2}{2(n+1)}.$$
+
+By the induction hypothesis $$\prod_{i=2}^{n+1}(1-\frac{1}{i^{2}})=\prod_{i=2}^{n}((1-\frac{1}{i^{2}})(1-\frac{1}{(n+1)^{2}}))=(\frac{n+1}{2n})(1-\frac{1}{(n+1)^{2}}).$$
+
+If we manipulate $(\frac{n+1}{2n})(1-\frac{1}{(n+1)^{2}})$ algebraically we get $$\frac{n+1}{2n}-\frac{n+1}{2n(n+1)^{2}}=\frac{(n+1)((n+1)^{2}-1)}{2n(n+1)^{2}}=\frac{n^{2}+2n}{2n^{2}+2n}=\frac{n+2}{2(n+1)}.$$
+
+Thus we have shown that $$P(n+1)\equiv\prod_{i=2}^{n+1}(1-\frac{1}{i^{2}}=\frac{n+2}{2(n+1)}.$$
+
+
+\end{proof}
+
+\end{document}
